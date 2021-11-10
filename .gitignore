@@ -1,7 +1,6 @@
 #  Concrete files #
 ############
 # nombres de archivos a ignorar
-*.txt
 *.bin
 *.lst
 

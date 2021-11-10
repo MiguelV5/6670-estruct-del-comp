@@ -1,0 +1,23 @@
+
+  -------- INSTALACION del Simulador de sistema ARC ARCtools ver 2.1.2 ---------
+
+1) Para operar ARCtools es necesario antes instalar el "Java Runtime Environment" que se baja gratis de 
+
+    http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
+
+2) Extraer el contenido del zip
+
+3) Invocar ArcTools con el comando de linea
+       java -jar ARCToolsv2.1.2.jar
+   o bien con el archivo  RUN.BAT que incluye este comando
+
+
+  ------- LO BASICO PARA PARA EMPEZAR A USAR ARCTOOLS -----------
+
+1) Abrir La ventana para editar codigo mediante el boton EDIT.
+
+2) El boton ASSEMBLE genera  el código de máquina o da mensajes por errores en el programa.
+
+3) Todas las instrucciones de assembler ARC estan referidas en la carpeta adjunta. 
+   Tener en cuenta que el libro de Murdocca-Miles refiere solo algunas.
+
