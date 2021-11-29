@@ -45,6 +45,10 @@ sumaNoRepresentable:
 x:  0x7fffffff  !0 en el bit más significativo (signo positivo) y el resto de bits en 1. 
 y:  1           !con sumarle uno a x deberia ser suficiente para causar overflow.
 
+
+! PARA EL EJERCICIO 11 SERIA EXACTAMENTE LO MISMO, EXCEPTO QUE EN LA LINEA 34 SERIA bcs Y LA x
+! TENDRIA VALOR 0xffffffff para que al sumarle 1 causara set del Carry.
+
 result: 0
 
 fin:
