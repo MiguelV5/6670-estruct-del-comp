@@ -3,6 +3,7 @@
 # nombres de archivos a ignorar
 *.bin
 *.lst
+examples/**
 
 # Compiled source #
 ###################
