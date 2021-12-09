@@ -20,7 +20,7 @@
         ba inicioMultiplicacionEnterosPositivos
 
         finMultiplicacion:
-            addcc %r7, %r0, RegResult
+            add %r7, %r0, RegResult
 
     .endmacro
 
@@ -56,7 +56,7 @@
 
     ba fin
 
-    x:  3
+    x:  0x7fffffff
     n:  2
     resultado:  0
     

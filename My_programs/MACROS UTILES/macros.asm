@@ -3,7 +3,7 @@
 !====================================PUSH====================================
    
    .macro push RegAAlmacenar   
-    addcc %r14, -4, %r14              !disminuye la direccion a la que apunta (el stack crece al reves de como crecen las posiciones de memora)
+    add %r14, -4, %r14              !disminuye la direccion a la que apunta (el stack crece al reves de como crecen las posiciones de memora)
     st RegAAlmacenar, %r14      !almaceno lo que se pide
     .endmacro
 
@@ -11,7 +11,7 @@
 
     .macro pop RegALoadearAntesDePopear
     ld %r14, RegALoadearAntesDePopear   !Guarda el dato antes de popearlo
-    addcc %r14, 4, %r14               !aumenta la direccion a la que apunta el stack pointer
+    add %r14, 4, %r14               !aumenta la direccion a la que apunta el stack pointer
     .endmacro
 
 !=================================Multip. Enteros POSITIVOS===============================
@@ -110,13 +110,35 @@
     .endmacro
 
 
-!=================================default===============================
+!=================================COMPLEMENTO A 2 (POR REGISTRO)===============================
+
+    .macro calcularComplementoADos RegACalcular RegResultado
+        xor RegACalcular, -1 , %r20   !Se invierten los bits del dato (Complemento a la base menos uno)
+        add %r20, 1, RegResultado     !Suma 1 (obtiene Compl. Base 2)
+    .endmacro
+
+!=================================MODULO===============================
+
+    .macro absDeEnteroEnComplementoADos RegACalcular RegResultado
+        addcc RegACalcular, %r0, RegACalcular     !trigger para el flag negativo
+        bneg calcularComplementoADos
+        ba absDePositivo
+
+        calcularComplementoADos:
+            xor RegACalcular, -1 , %r20   !Se invierten los bits del dato (Complemento a la base menos uno)
+            add %r20, 1, RegResultado     !Suma 1 (obtiene Compl. Base 2)
+            ba finAbs
+
+        absDePositivo:
+            add RegACalcular, %r0, RegResultado
+
+        finAbs:
+
+    .endmacro
 
 
-
-!=================================default===============================
-
-
+!(RUTINAS NECESARIAS):
+    
 
 !=================================default===============================
 
