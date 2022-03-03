@@ -1,0 +1,21 @@
+/1ra microinstrucción:
+/AMUX, BMUX y CMUX en 0 --> registros a usar indicados por MIR
+/RD y WR en 0
+/COND es de NEXT; JUMP ADDR de NEXT
+/ALU 1100
+
+
+
+
+
+
+
+
+
+
+
+
+.
+.
+.
+2047:   R[pc] = INCPC[pc]; GOTO 0;
